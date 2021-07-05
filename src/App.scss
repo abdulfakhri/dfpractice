@@ -19,3 +19,24 @@ html {
   font-family: $font_family;
 }
 
+//title heading styling
+h1 {
+  text-align: $text-align;
+  font-family: $font_family;
+}
+
+//login form styling
+.login{
+  $width: 600px;
+  width: $width;
+  $height: 550px;
+  height: $height;
+  margin:auto;
+  margin-top: $margin-top;
+  border-top: $border-top;
+  $background: #fff;
+  background-color: $background;
+  box-shadow: $box-shadow;
+  color: $textColor;
+  border-radius: $border-radius;
+}
