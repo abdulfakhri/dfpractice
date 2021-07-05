@@ -1,0 +1,21 @@
+//importing sass variables from variables
+@import "_variables";
+
+//using simply the Google font, via this API in this case we need the Roboto
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+//body styling 
+body,
+html {
+  $background: #f1f1f1;
+  background: $background;
+  width: $width;
+  font-size: $font-size;
+}
+
+
+//setting the font family for all the components in our page
+* {
+  font-family: $font_family;
+}
+
