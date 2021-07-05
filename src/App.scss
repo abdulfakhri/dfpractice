@@ -125,6 +125,32 @@ button {
   box-sizing: border-box;
   margin:auto;
 }
+//login button hover behavior styling
+button:hover {
+  cursor: $cursor;
+  $background: #06874e;
+  background-color: $background;
+  $textColor: rgb(70, 153, 179);
+  color: $textColor;
+}
+
+//form links  anchor tag styling
+a {
+
+  $font-weight: bold;
+  font-weight: $font-weight;
+  color: $textColor;
+}
+
+//form links to signup,remeberme and resend email text styling
+span {
+  $display: block;
+  display: $display;
+  align-items: $align-items;
+  text-align: $text-align;
+  padding: 0.5em;
+
+}
 
 /*to make the page responsive for devices with different screen size */
 @media screen and (max-width: 640px) and (min-width: 360px),
