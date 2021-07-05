@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import axios from 'axios';
 /*
 Validation function and component is 
 intiated here that consist the form 
@@ -12,16 +13,31 @@ const Validation = () => (
   <Formik
     //intializes the form input fields that we want to collect their data
     initialValues={{ email: "", password: "", rememberMe: "" }}
-  /*
-   Creating the validationSchema using Yup to make the validation messages for the email and password fields 
-   in case if its blank or entered wrong value.
-  */
+    //We are handing the form data here using the axios and also the failure case, if the response is Faild
+    onSubmit={async (values, { setSubmitting }) => {
+      //using axios for post the data, here (values) includes our data
+      axios.post('http://localhost:8000/api/login', values).then(res => {
+        alert.success(res.data)
+        this.bindUserData();
+        console.log("User Submitted Data", values);
+        setSubmitting(true);
+      })
+        .catch(err => {
+          console.log("User Submitted Data", values);
+          alert('Login Faild, API cant be found.');
+        });
+    }}
+
+    /*
+     Creating the validationSchema using Yup to make the validation messages for the email and password fields 
+     in case if its blank or entered wrong value.
+    */
     validationSchema={
       Yup.object().shape({
         email: Yup.string()
           .email()
           .required("email is required"),
-           password: Yup.string()
+        password: Yup.string()
           .required("password is not provided")
           .min(8, "Password must should be at least 8 chars")
           .matches(/(?=.*[0-9])/, "password must contain a number")
