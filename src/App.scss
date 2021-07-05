@@ -13,7 +13,6 @@ html {
   font-size: $font-size;
 }
 
-
 //setting the font family for all the components in our page
 * {
   font-family: $font_family;
@@ -125,7 +124,7 @@ button {
   box-sizing: border-box;
   margin:auto;
 }
-//login button hover behavior styling
+//sign in button hover behavior styling
 button:hover {
   cursor: $cursor;
   $background: #06874e;
@@ -134,7 +133,7 @@ button:hover {
   color: $textColor;
 }
 
-//form links  anchor tag styling
+//sign in form links  anchor tag styling
 a {
 
   $font-weight: bold;
@@ -142,7 +141,7 @@ a {
   color: $textColor;
 }
 
-//form links to signup,remeberme and resend email text styling
+//sign in form links to signup,remeberme and resend email text styling
 span {
   $display: block;
   display: $display;
@@ -150,6 +149,21 @@ span {
   text-align: $text-align;
   padding: 0.5em;
 
+}
+
+//sign in form validation messages styling
+input.error {
+  $border-color: rgb(236, 6, 6);
+  border-color: $border-color;
+  
+}
+//sign in form validation messages styling
+.input-feedback {
+  $textColor: rgb(235, 54, 54);
+  color: $textColor;
+  $font-size: 14px;
+  font-size: $font-size;
+  padding-left: $padding_left;
 }
 
 /*to make the page responsive for devices with different screen size */
@@ -233,7 +247,6 @@ label {
 }
 //labels in sign in form styling for phone and tablet screen size devices
 .label_checkbox {
- 
   $font-weight: normal;
   $padding_left:0px;
   padding-left: $padding_left;
@@ -241,6 +254,23 @@ label {
   padding-bottom: $padding_bottom;
   font-weight: $font-weight;
   
-   }
-
   }
+
+//sign in form validation messages styling for phone and tablet screen size devices
+input.error {
+  $border-color: rgb(236, 6, 6);
+  border-color: $border-color;
+  
+}
+//sign in form validation messages styling for phone and tablet screen size devices
+.input-feedback {
+  $textColor: rgb(235, 54, 54);
+  color: $textColor;
+  $font-size: 14px;
+  font-size: $font-size;
+  padding-left: $padding_left;
+}
+
+
+
+}
