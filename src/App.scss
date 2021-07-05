@@ -125,3 +125,96 @@ button {
   box-sizing: border-box;
   margin:auto;
 }
+
+/*to make the page responsive for devices with different screen size */
+@media screen and (max-width: 640px) and (min-width: 360px),
+  (max-width: 1024px) and (min-width: 700px) {
+ 
+  body,
+  html {
+  $background: #f1f1f1;
+  background: $background;
+  width: $width;
+  font-size: $font-size;
+}
+
+//title heading styling for phone and tablet screen size devices
+h1 {
+  text-align: $text-align;
+  font-family: $font_family;
+}
+
+//login div styling for phone and tablet screen size devices
+.login{
+  $width: 100%;
+  width: $width;
+  $height: 550px;
+  height: $height;
+  margin:auto;
+  border-top: $border-top;
+  $background: #fff;
+  background-color: $background;
+  box-shadow: $box-shadow;
+  color: $textColor;
+  border-radius: $border-radius;
+}
+//input sign in form styling for phone and tablet screen size devices
+input[type="text"],
+input[type="password"] {
+  $width: 100%;
+  width: $width;
+  $height: 50px;
+  height: $height;
+  display: $display;
+  $padding_bottom:10px;
+  padding-bottom: $padding_bottom;
+  border: $border;
+  box-sizing: border-box;
+  margin:auto;
+}
+//button sign in form styling for phone and tablet screen size devices
+button {
+  $width: 100%;
+  width: $width;
+  $height: 50px;
+  height: $height;
+  $font-size: 20px;
+  font-size: $font-size;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  $background: #06874e;
+  background-color: $background;
+  $textColor: white;
+  color: $textColor;
+  border: $border;
+  $display: block;
+  display: $display;
+  box-sizing: border-box;
+  margin:auto;
+}
+// labels in sign in form styling for phone and tablet screen size devices
+label {
+  $display: block;
+  display: $display;
+  font-weight: bolder;
+  $padding_left:0px;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  
+}
+//labels in sign in form styling for phone and tablet screen size devices
+.label_checkbox {
+ 
+  $font-weight: normal;
+  $padding_left:0px;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  
+   }
+
+  }
