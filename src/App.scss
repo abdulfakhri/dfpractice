@@ -25,7 +25,7 @@ h1 {
   font-family: $font_family;
 }
 
-//login form styling
+//sign in form styling
 .login{
   $width: 600px;
   width: $width;
@@ -39,4 +39,89 @@ h1 {
   box-shadow: $box-shadow;
   color: $textColor;
   border-radius: $border-radius;
+}
+
+//sign in form, email field styling
+.email{
+  margin-bottom: 20px;
+}
+//sign in form, password field styling
+.password{
+  margin-bottom: 10px;
+}
+
+//sign in form, checkbox field styling
+.checkbox{
+  margin-bottom: 10px;
+}
+//sign in form, sign in button styling
+.sign_button{
+   margin-bottom: 10px;
+}
+
+//sign in form inputs styling
+input[type="text"],
+input[type="password"] {
+  $width: 500px;
+  width: $width;
+  $height: 50px;
+  height: $height;
+  display: $display;
+  $padding_bottom:10px;
+  padding-bottom: $padding_bottom;
+  border: $border;
+  box-sizing: border-box;
+  margin:auto;
+}
+
+//sign in form remember me checkbox input styling
+input[type="checkbox"] {
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  border:1px solid #ccc;
+  $display: inline-block;
+  display: $display;
+}
+
+//sign in form email feild input label styling
+label {
+  $display: block;
+  display: $display;
+  font-weight: bolder;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  
+}
+//sign in form checkbox label styling
+.label_checkbox {
+  $font-weight: normal;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  
+}
+
+//sign in form button styling
+button {
+  $width: 500px;
+  width: $width;
+  $height: 50px;
+  height: $height;
+  $font-size: 20px;
+  font-size: $font-size;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  $background: #06874e;
+  background-color: $background;
+  $textColor: white;
+  color: $textColor;
+  border: $border;
+  $display: block;
+  display: $display;
+  box-sizing: border-box;
+  margin:auto;
 }
