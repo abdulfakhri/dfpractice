@@ -72,12 +72,12 @@ const Validation = () => (
             </div>
 
             <div className="checkbox">
-              <label className="label_checkbox">
+              <label class="rememberMe_checkbox">Remember me?
                 <input type="checkbox" value={values.rememberMe} onChange={handleChange}
-                  onBlur={handleBlur} name="rememberMe" id="rememberMe" /> Remember me
+                  onBlur={handleBlur} name="rememberMe" id="rememberMe" />
+                <span class="checkmark"></span>
               </label>
             </div>
-
             <div className="sign_button">
               <button type="submit" disabled={isSubmitting}>
                 Sign in

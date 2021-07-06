@@ -1,10 +1,13 @@
 //importing sass variables from variables
 @import "_variables";
-
 //using simply the Google font, via this API in this case we need the Roboto
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-//body styling 
+//Setting the font family for all the components in our page
+* {
+  font-family: $font_family;
+}
+//Body styling 
 body,
 html {
   $background: #f1f1f1;
@@ -13,24 +16,24 @@ html {
   font-size: $font-size;
 }
 
-//setting the font family for all the components in our page
-* {
-  font-family: $font_family;
-}
-
-//title heading styling
+//Title heading styling
 h1 {
   text-align: $text-align;
   font-family: $font_family;
 }
-
-//sign in form styling
+//Sign in form 
+form{
+  $width: 600px;
+  width: $width;
+}
+//Sign in form styling
 .login{
   $width: 600px;
   width: $width;
   $height: 550px;
   height: $height;
-  margin:auto;
+  $margin: auto;
+  margin: $margin;
   margin-top: $margin-top;
   border-top: $border-top;
   $background: #fff;
@@ -40,62 +43,64 @@ h1 {
   border-radius: $border-radius;
 }
 
-//sign in form, email field styling
+//Sign in form, email field styling
 .email{
-  margin-bottom: 20px;
+  $margin-bottom: 20px;
+  margin-bottom: $margin-bottom;
 }
-//sign in form, password field styling
+//Sign in form, password field styling
 .password{
-  margin-bottom: 10px;
+  $margin-bottom: 10px;
+  margin-bottom: $margin-bottom;
 }
 
-//sign in form, checkbox field styling
+//Sign in form, checkbox field styling
 .checkbox{
-  margin-bottom: 10px;
+  $padding-top: 25px;
+  padding-top: $padding-top;
+  $padding-bottom: 25px;
+  padding-bottom: $padding_bottom;
+  $display: inline-block;
+  display: $display;
+ 
 }
-//sign in form, sign in button styling
+//Sign in form, sign in button styling
 .sign_button{
-   margin-bottom: 10px;
+   $margin-bottom: 10px;
+   margin-top:$margin-top;
 }
-
-//sign in form inputs styling
+//Sign in form inputs styling
 input[type="text"],
 input[type="password"] {
   $width: 500px;
   width: $width;
-  $height: 50px;
+  $padding_left: 8px;
+  padding-left: $padding_left;
+  $padding-top: 10px;
+  padding-top: $padding_top;
+  $height: 45px;
   height: $height;
+  $font-size: 25px;
+  font-size: $font-size;
   display: $display;
   $padding_bottom:10px;
   padding-bottom: $padding_bottom;
+  $border: 1px solid #ccc;
   border: $border;
-  box-sizing: border-box;
-  margin:auto;
+  $box-sizing: border-box;
+  box-sizing: $box-sizing;
+  margin:$margin;
 }
 
-//sign in form remember me checkbox input styling
-input[type="checkbox"] {
-  padding-left: $padding_left;
-  padding-right: $padding_right;
-  border:1px solid #ccc;
-  $display: inline-block;
-  display: $display;
-}
 
-//sign in form email feild input label styling
+//Sign in form email feild input label styling
 label {
   $display: block;
   display: $display;
-  font-weight: bolder;
-  padding-left: $padding_left;
-  padding-right: $padding_right;
-  padding-bottom: $padding_bottom;
+  $font-size: larger;
+  font-size: $font-size;
+  $font-weight: bolder;
   font-weight: $font-weight;
-  
-}
-//sign in form checkbox label styling
-.label_checkbox {
-  $font-weight: normal;
   padding-left: $padding_left;
   padding-right: $padding_right;
   padding-bottom: $padding_bottom;
@@ -103,7 +108,19 @@ label {
   
 }
 
-//sign in form button styling
+//Sign in form checkbox label styling
+.label_checkbox {
+  $font-weight: normal;
+  $font-size: larger;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  
+}
+//Sign in form button styling
 button {
   $width: 500px;
   width: $width;
@@ -124,7 +141,7 @@ button {
   box-sizing: border-box;
   margin:auto;
 }
-//sign in button hover behavior styling
+//Sign in button hover behavior styling
 button:hover {
   cursor: $cursor;
   $background: #06874e;
@@ -133,31 +150,30 @@ button:hover {
   color: $textColor;
 }
 
-//sign in form links  anchor tag styling
+//Sign in form links  anchor tag styling
 a {
-
   $font-weight: bold;
   font-weight: $font-weight;
   color: $textColor;
 }
 
-//sign in form links to signup,remeberme and resend email text styling
+//Sign in form links to signup,remeberme and resend email text styling
 span {
   $display: block;
   display: $display;
   align-items: $align-items;
   text-align: $text-align;
-  padding: 0.5em;
+  $padding: 0.5em;
+  padding: $padding;
 
 }
-
-//sign in form validation messages styling
+//Sign in form validation messages styling
 input.error {
   $border-color: rgb(236, 6, 6);
   border-color: $border-color;
   
 }
-//sign in form validation messages styling
+//Sign in form validation messages styling
 .input-feedback {
   $textColor: rgb(235, 54, 54);
   color: $textColor;
@@ -166,31 +182,151 @@ input.error {
   padding-left: $padding_left;
 }
 
-/*to make the page responsive for devices with different screen size */
+/* Remember me checkbox */
+.rememberMe_checkbox{
+  display: $display;
+  position: $position;
+  $padding_left: 90px;
+  padding-left: $padding_left;
+  cursor: $cursor;
+  $font-size: 19px;
+  font-size: $font-size;
+  $font-weight: normal;
+  font-weight: $font-weight;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+   user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.rememberMe_checkbox input[type="checkbox"] {
+  position: $position;
+  opacity: $opacity;
+  cursor: $cursor;
+  height: $height;
+  width: $width;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: $position;
+  $top: 0;
+  top: $top;
+  left:$left;
+  $height: 5px;
+  height: $height;
+  $width: 5px;
+  width: $width;
+  background-color: $background-color;
+  border: $border;
+  display: $display;
+}
+
+/* On mouse-over, add a grey background color */
+.rememberMe_checkbox:hover input ~ .checkmark {
+  background-color: $background-color;
+}
+
+/* When the checkbox is checked, add a blue background */
+.rememberMe_checkbox input:checked ~ .checkmark {
+  background-color: $background-color;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: $content;
+  position: $position;
+  $display: none;
+  display: $display;
+}
+
+/* Show the checkmark when checked */
+.rememberMe_checkbox input:checked ~ .checkmark:after {
+  display: $display;
+}
+
+/* Style the checkmark/indicator */
+.rememberMe_checkbox .checkmark:after {
+  $left: 7px;
+  left: $left;
+  $top: 5px;
+  top: $top;
+  $width: 4px;
+  width: $width;
+  $height: 10px;
+  height: $height;
+  $border:1px solid #000;
+  border: $border;
+  $border-width: 0 3px 3px 0;
+  border-width: $border-width;
+  -webkit-transform: $webkit-transform;
+  -ms-transform: $ms-transform;
+  transform: $transform;
+}
+/*To make the page responsive for devices with different screen size */
 @media screen and (max-width: 640px) and (min-width: 360px),
   (max-width: 1024px) and (min-width: 700px) {
- 
+  //Body styling 
   body,
   html {
   $background: #f1f1f1;
   background: $background;
-  width: $width;
   font-size: $font-size;
+  width: $width;
+  height: $height;
+
 }
 
-//title heading styling for phone and tablet screen size devices
+//Title heading styling
 h1 {
   text-align: $text-align;
   font-family: $font_family;
 }
+//Sign in form email feild input label styling
+label {
+  $display: block;
+  display: $display;
+  $font-size: larger;
+  font-size: $font-size;
+  $font-weight: bolder;
+  $padding_left:0px;
+  $font-weight: bolder;
+  font-weight: $font-weight;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  overflow: $overflow;
+}
+//Sign in form checkbox label styling
+.label_checkbox {
+  $font-size: larger;
+  font-size: $font-size;
+  $font-weight: normal;
+  font-weight: $font-weight;
+  $padding_left:0px;
+  padding-left: $padding_left;
+  padding-right: $padding_right;
+  padding-bottom: $padding_bottom;
+  font-weight: $font-weight;
+  
+}
+//Sign in form styling
 
-//login div styling for phone and tablet screen size devices
 .login{
-  $width: 100%;
+  overflow: hidden;
+  $width: 90%;
   width: $width;
-  $height: 550px;
+  $height: 100%;
   height: $height;
-  margin:auto;
+  $margin: auto;
+  margin: $margin;
+  $padding_left: 5%;
+  $padding_right:5%;
+  padding-left:$padding_left;
+  padding-right: $padding_right;
   border-top: $border-top;
   $background: #fff;
   background-color: $background;
@@ -198,21 +334,24 @@ h1 {
   color: $textColor;
   border-radius: $border-radius;
 }
-//input sign in form styling for phone and tablet screen size devices
+
+
+//Sign in form 
+form{
+  $width: 100%;
+  width: $width;
+  $margin: auto;
+  margin: $margin;
+}
+//Sign in form inputs styling
 input[type="text"],
 input[type="password"] {
   $width: 100%;
   width: $width;
-  $height: 50px;
-  height: $height;
-  display: $display;
-  $padding_bottom:10px;
-  padding-bottom: $padding_bottom;
-  border: $border;
-  box-sizing: border-box;
-  margin:auto;
+  $margin: auto;
+  margin: $margin;
 }
-//button sign in form styling for phone and tablet screen size devices
+//Sign in form button styling
 button {
   $width: 100%;
   width: $width;
@@ -227,50 +366,107 @@ button {
   background-color: $background;
   $textColor: white;
   color: $textColor;
-  border: $border;
   $display: block;
   display: $display;
   box-sizing: border-box;
-  margin:auto;
+  $margin: auto;
+  margin: $margin;
 }
-// labels in sign in form styling for phone and tablet screen size devices
-label {
-  $display: block;
-  display: $display;
-  font-weight: bolder;
-  $padding_left:0px;
-  padding-left: $padding_left;
-  padding-right: $padding_right;
-  padding-bottom: $padding_bottom;
-  font-weight: $font-weight;
-  
-}
-//labels in sign in form styling for phone and tablet screen size devices
-.label_checkbox {
-  $font-weight: normal;
-  $padding_left:0px;
-  padding-left: $padding_left;
-  padding-right: $padding_right;
-  padding-bottom: $padding_bottom;
-  font-weight: $font-weight;
-  
-  }
 
-//sign in form validation messages styling for phone and tablet screen size devices
-input.error {
-  $border-color: rgb(236, 6, 6);
-  border-color: $border-color;
-  
-}
-//sign in form validation messages styling for phone and tablet screen size devices
+//Sign in form validation messages styling
 .input-feedback {
   $textColor: rgb(235, 54, 54);
   color: $textColor;
   $font-size: 14px;
   font-size: $font-size;
+  $padding_left:1px;
   padding-left: $padding_left;
 }
 
-
+/* Remember me checkbox */
+.rememberMe_checkbox {
+display: $display;
+position: $position;
+$padding_left: 40px;
+padding-left: $padding_left;
+cursor: $cursor;
+$font-size: 19px;
+font-size: $font-size;
+$font-weight: normal;
+font-weight: $font-weight;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 
 }
+
+/* Hide the browser's default checkbox */
+.rememberMe_checkbox input[type="checkbox"] {
+ position: $position;
+  opacity: $opacity;
+  cursor: $cursor;
+  height: $height;
+  width: $width;
+}
+
+/* create a custom checkbox */
+.checkmark {
+  position: $position;
+  $top: 0;
+  top: $top;
+  $left: 7px;
+  left:$left;
+  $height: 5px;
+  height: $height;
+  $width: 5px;
+  width: $width;
+  background-color: $background-color;
+  border: $border;
+  display: $display;
+}
+
+/* On mouse-over, add a grey background color */
+.rememberMe_checkbox:hover input ~ .checkmark {
+  background-color: $background-color;
+}
+
+/* When the checkbox is checked, add a blue background */
+.rememberMe_checkbox input:checked ~ .checkmark {
+  background-color: $background-color;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: $content;
+  position: $position;
+  $display: none;
+  display: $display;
+}
+
+/* Show the checkmark when checked */
+.rememberMe_checkbox input:checked ~ .checkmark:after {
+  display: $display;
+}
+
+/* Style the checkmark/indicator */
+.rememberMe_checkbox .checkmark:after {
+  $left: 7px;
+  left: $left;
+  $top: 5px;
+  top: $top;
+  $width: 4px;
+  width: $width;
+  $height: 10px;
+  height: $height;
+  $border:1px solid #000;
+  border: $border;
+  $border-width: 0 3px 3px 0;
+  border-width: $border-width;
+  -webkit-transform: $webkit-transform;
+  -ms-transform: $ms-transform;
+  transform: $transform;
+}
+
+}
+
